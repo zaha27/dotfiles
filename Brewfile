@@ -40,7 +40,6 @@ cask "dbeaver-community"
 cask "ghostty"
 cask "google-chrome"
 cask "libreoffice"
-cask "multipass"   # devserver VM is running
 
 # ── Fonts ────────────────────────────────────────────
 # (none)
