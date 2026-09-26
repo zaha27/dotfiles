@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+._*
+
+# Local env overrides (never commit)
+.env.local
+.env.*.local
+
+# Editors
+*.swp
+*~
+.idea/workspace.xml
+.vscode/*.log

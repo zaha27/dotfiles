@@ -7,6 +7,7 @@
 # ── CLI essentials ───────────────────────────────────
 brew "btop"        # resource monitor
 brew "gh"          # GitHub CLI
+brew "git-lfs"     # large files in git (required by .gitconfig)
 brew "mise"         # runtime version manager (node etc.)
 brew "ripgrep"      # fast grep (rg)
 brew "fd"           # fast find

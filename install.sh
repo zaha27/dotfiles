@@ -21,6 +21,8 @@ brew bundle --file="$DOT/Brewfile" || echo "warning: some Brewfile entries faile
 # 2. Shell + runtimes
 link zsh/.zshrc ~/.zshrc
 link mise/config.toml ~/.config/mise/config.toml
+link git/gitignore_global ~/.gitignore_global
+git config --global core.excludesfile ~/.gitignore_global
 mise install
 
 # 3. Claude Code: skills (one symlink per skill), settings (copied, Claude rewrites it)
