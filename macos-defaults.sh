@@ -1,10 +1,6 @@
 #!/usr/bin/env zsh
 # macOS preferences. Idempotent: safe to re-run.
-# Press-and-hold accent popup is intentionally left on (Romanian diacritics).
-
-# Keyboard: fast key repeat
-defaults write -g KeyRepeat -int 2
-defaults write -g InitialKeyRepeat -int 15
+# Left at macOS defaults on purpose: key repeat speed, press-and-hold accent popup.
 
 # Text: no smart quotes/dashes, no autocorrect
 defaults write -g NSAutomaticQuoteSubstitutionEnabled -bool false
