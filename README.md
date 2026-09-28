@@ -29,4 +29,5 @@ git clone https://github.com/zaha27/dotfiles ~/dotfiles
   add `{ "name": "<name>", "source": "./claude/plugins/<name>" }` to `.claude-plugin/marketplace.json`,
   then `claude plugin validate .` and in Claude Code: `/plugin install <name>@zaha-dotfiles`.
 - **Brew package:** `brew install x`, then add it to `Brewfile` in the right section.
-- **Claude settings changed:** `cp ~/.claude/settings.json claude/settings.json`.
+- **Claude settings changed:** `jq 'del(.autoMode)' ~/.claude/settings.json > claude/settings.json`
+  (drops `autoMode`, which holds machine-specific repo/org names; this repo is public).
