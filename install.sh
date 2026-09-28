@@ -25,10 +25,15 @@ link git/gitignore_global ~/.gitignore_global
 git config --global core.excludesfile ~/.gitignore_global
 mise install
 
-# 3. Claude Code: global CLAUDE.md, skills (one symlink per skill), settings (copied, Claude rewrites it)
+# 3. Claude Code: global CLAUDE.md, settings (copied, Claude rewrites it)
 link claude/CLAUDE.md ~/.claude/CLAUDE.md
-for s in "$DOT"/claude/skills/*(N/); do link "claude/skills/${s:t}" ~/.claude/skills/${s:t}; done
 [[ -e ~/.claude/settings.json ]] || cp "$DOT/claude/settings.json" ~/.claude/settings.json
+
+# 3b. Claude skills & plugins (separate repo: github.com/zaha27/skills)
+SKILLS=~/Documents/GitHub/skills
+[[ -d $SKILLS ]] || git clone https://github.com/zaha27/skills "$SKILLS"
+git -C "$SKILLS" pull --ff-only || echo "warning: could not update $SKILLS"
+"$SKILLS/install.sh"
 
 # 4. macOS defaults
 [[ -x "$DOT/macos-defaults.sh" ]] && "$DOT/macos-defaults.sh"
