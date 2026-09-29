@@ -22,6 +22,7 @@ brew bundle --file="$DOT/Brewfile" || echo "warning: some Brewfile entries faile
 link zsh/.zshrc ~/.zshrc
 link mise/config.toml ~/.config/mise/config.toml
 link git/gitignore_global ~/.gitignore_global
+link vim/.vimrc ~/.vimrc
 git config --global core.excludesfile ~/.gitignore_global
 mise install
 
